@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { observer } from 'mobx-react'
-import store from './store'
+import store from '../../stores/TodosPageStore'
+import Todo from '../../components/Todo'
 
 const TodosPage = () => {
   useEffect(() => {
@@ -18,7 +19,7 @@ const TodosPage = () => {
       />
       <div>
         {store.todos.map((todo) => (
-          <div key={todo.id}>{todo.text}</div>
+          <Todo text={todo.text} key={todo.id} />
         ))}
       </div>
     </>

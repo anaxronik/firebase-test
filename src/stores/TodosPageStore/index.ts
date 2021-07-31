@@ -1,6 +1,6 @@
 import { makeAutoObservable, runInAction } from 'mobx'
-import { TodoApi } from './../api/index'
-import { ITodo } from './types'
+import { TodoApi } from '../../api/TodoApi'
+import { ITodo } from '../../types/todos'
 
 class TodosPageStore {
   searchString: string = ''
